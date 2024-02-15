@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Blog</title>
+    <link rel="stylesheet" href="/ManageBLog.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">My BLog</h1>
+      <ul class="menuList">
+        <li><a class="menuItem" href="./index.html#home">HOME</a></li>
+        <li><a class="menuItem" href="./dashboard.html">Dashboard</a></li>
+        <li><a class="menuItem" href="./Messages.html">messages</a></li>
+        <li><a class="menuItem" href="./ManageBLogs.html">MANAGE BLOG</a></li>
+        <li><a class="menuItem" href="./CreateBlog.html">create BLOG</a></li>
+      </ul>
+      <div></div>
+      <div class="buttonContainer">
+        <button class="menubar">
+          <img src="../assets/menu.png" alt="menulines" />
+        </button>
+      </div>
+      <div class="sidebar bar">
+        <div class="sidebarButton">
+          <h1 class="logo">My BLog</h1>
+          <button class="menubar close">
+            <img src="../assets/close.png" alt="close" />
+          </button>
+        </div>
+        <ul class="sidebarMenu">
+          <li>
+            <a class="menuItem sideItem close" href="./index.html#home">HOME</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="./dashboard.html">DASHBOARD</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/Messages.html">MESSAGES</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/ManageBLogs.html">MANAGE BLOG</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/CreateBlog.html">CREATE BLOG</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="mainContainer">
+        <h1 class="heading">Manage Blogs</h1>
+        <div class="ManageBlog">
+          <div class="arrowLeft">
+            <img src="./assets/right.svg" alt="left" />
+          </div>
+          <div class="Blog">
+            <div class="blogImage">
+              <img src="./assets/article2.png" alt="blog" />
+            </div>
+            <h1 class="blogTitle">Marketing</h1>
+            <p class="desc">Your business with a variety of digital</p>
+            <div class="actions">
+              <div class="edit">
+                <img src="./assets/edit.svg" alt="edit" />
+              </div>
+              <div class="delete">
+                <img src="./assets/delete.svg" alt="delete" />
+              </div>
+            </div>
+          </div>
+          <div class="arrowRight">
+            <img src="./assets/left.svg" alt="right" />
+          </div>
+        </div>
+        <div class="submission">
+          <div class="">
+            <h2 class="userTitle">Logged in as:</h2>
+            <p class="email">manzirurangwa@gmail.com</p>
+            <div class="navButtons">
+              <button class="home">
+                <a href="./index.html">Return Home</a>
+              </button>
+              <button class="">SIGN OUT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/createBlog.js"></script>
+  </body>
+</html>

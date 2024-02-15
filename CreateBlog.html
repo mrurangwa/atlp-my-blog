@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog</title>
+    <link rel="stylesheet" href="./CreateBlog.css" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo">My BLog</h1>
+      <ul class="menuList">
+        <li><a class="menuItem" href="./index.html#home">HOME</a></li>
+        <li><a class="menuItem" href="/dashboard.html">Dashboard</a></li>
+        <li><a class="menuItem" href="./Messages.html">messages</a></li>
+        <li><a class="menuItem" href="./ManageBLogs.html">MANAGE BLOG</a></li>
+        <li><a class="menuItem" href="./CreateBlog.html">create BLOG</a></li>
+      </ul>
+      <div></div>
+      <div class="buttonContainer">
+        <button class="menubar">
+          <img src="../assets/menu.png" alt="menulines" />
+        </button>
+      </div>
+      <div class="sidebar bar">
+        <div class="sidebarButton">
+          <h1 class="logo">My BLog</h1>
+          <button class="menubar close">
+            <img src="../assets/close.png" alt="close" />
+          </button>
+        </div>
+        <ul class="sidebarMenu">
+          <li>
+            <a class="menuItem sideItem close" href="./index.html">HOME</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/dashboard.html">DASHBOARD</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="./Messages.html">MESSAGES</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/ManageBLogs.html">MANAGE BLOG</a>
+          </li>
+          <li>
+            <a class="menuItem sideItem close" href="/CreateBlog.html">CREATE BLOG</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="CreatePost">
+        <div class="createInputs">
+          <h1 class="heading">CREATE BLOG POST</h1>
+          <div class="input">
+            <label for="BlogTitle">Blog title</label>
+            <input type="text" class="blogTitle" />
+          </div>
+          <div class="input">
+            <h2>Upload Image: <span>select file</span></h2>
+            <!-- <input class="fileInput" type="file" class="file" placeholder="select file" /> -->
+          </div>
+          <div class="input bodyInput">
+            <label for="body">Body</label>
+            <textarea name="body"></textarea>
+          </div>
+          <button class="button">Update Blog</button>
+        </div>
+        <div class="submission">
+          <div class="navigation">
+            <h2 class="userTitle">Logged in as:</h2>
+            <p class="email">manzirurangwa@gmail.com</p>
+            <div class="navButtons">
+              <button class="home">
+                <a href="./index.html">Return Home</a>
+              </button>
+              <button class="">SIGN OUT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./createBlog.js"></script>
+  </body>
+</html>
