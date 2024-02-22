@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,12 +10,12 @@
 }
 
 :root {
-  --Logo-font: "Arvo", serif;
-  --font-family: "Lexend Deca", sans-serif;
-  --secondary-font-family: "Epilogue", sans-serif;
+  --Logo-font: 'Arvo', serif;
+  --font-family: 'Lexend Deca', sans-serif;
+  --secondary-font-family: 'Epilogue', sans-serif;
   --primary-background: #111827;
   --secondary-background: #030617;
-  --poppins: "Poppins", sans-serif;
+  --poppins: 'Poppins', sans-serif;
   --input-color: #1f2937;
   --normal-color: #f3f4f6;
   --primary-color: #facc15;
@@ -99,8 +99,6 @@ main {
   font-weight: 400;
   text-transform: uppercase;
 }
-
-
 
 .navButtons {
   display: flex;
@@ -298,4 +296,39 @@ a {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.messageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.messageCard {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.email {
+  font-style: italic;
+  color: #666;
+}
+
+.desc {
+  margin-top: 10px;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
 }

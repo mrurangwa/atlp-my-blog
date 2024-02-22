@@ -97,7 +97,9 @@
                   and the occasional eureka moments.<br />
                   Let's navigate the digital realm together!
                 </p>
-                <button class="button"><a class="link" href="#contact">contact us</a></button>
+                <button class="button">
+                  <a class="link" href="#contact">contact us</a>
+                </button>
               </div>
               <div class="aboutPicture">
                 <img src="assets/pic2.png" alt="me" />
@@ -229,13 +231,22 @@
                 <h1><span>E mail _</span> manzirurangwa20@gmail.com</h1>
               </div>
               <div class="inputContainer">
-                <input class="nameInput" type="text" placeholder="Name" />
-                <textarea
-                  class="messageInput"
-                  type="text"
-                  placeholder="Message"
-                ></textarea>
-                <button class="button">Contact us</button>
+                <form class="contactForm">
+                  <input
+                    class="nameInput"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                  <textarea
+                    class="messageInput"
+                    name="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                  <button class="formButton" type="submit">Contact us</button>
+                </form>
               </div>
             </div>
           </section>

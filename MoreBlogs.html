@@ -9,6 +9,9 @@
       href="https://fonts.googleapis.com/css?family=Lexend Deca"
       rel="stylesheet"
     />
+    <style>
+    
+    </style>
   </head>
   <body>
     <div class="container">
@@ -97,90 +100,84 @@
             and the like).
           </p>
         </div>
+       
+       
+       
+     
         <div class="comment-section">
           <h1>Leave a comment</h1>
-          <form action="#">
-            <div class="form">
-              <div>
-                <div>
-                  <label for="name">Name</label
-                  ><input type="text" name="name" id="name" />
-                </div>
-                <div>
-                  <label for="name">Name</label
-                  ><input type="text" name="name" id="name" />
-                </div>
+          <form id="commentForm">
+              <div class="form">
+                  <div>
+                      <div>
+                          <label for="name">Name</label>
+                          <input type="text" name="name" id="name" required />
+                      </div>
+                      <div>
+                          <label for="comment">Comment</label>
+                          <textarea type="text" name="comment" rows="5" id="comment" required></textarea>
+                      </div>
+                  </div>
               </div>
-              <div>
-                <label for="comment">Comment</label
-                ><textarea
-                  type="text"
-                  name="comment"
-                  rows="5"
-                  id="comment"
-                ></textarea>
-              </div>
-            </div>
-            <button>SHARE</button>
+              <button type="button" onclick="addComment()">SHARE</button>
           </form>
-        </div>
-        <div class="comments">
-          <h1>Comments</h1>
-          <div class="comments-cont">
-            <div class="comment-cont-two">
-              <div>
-                <h4>MANZI RURANGWA R. says...</h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout
-                </p>
-                <span>JAN 24, 2024-- 11:46 PM</span>
-              </div>
-              <div>
-                <h4>MURASIRA Bryan says..</h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout
-                </p>
-                <span>JAN 24, 2024-- 11:46 PM</span>
-              </div>
-            </div>
-            <div class="comment-cont-two">
-              <div>
-                <h4>SHINGIRO Christian says..</h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout
-                </p>
-                <span>JAN 24, 2024 -- 11:46 PM</span>
-              </div>
-              <div>
-                <h4>TUSIFU Edinson says..</h4>
-                <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout
-                </p>
-                <span>JAN 24, 2024 -- 11:46 PM</span>
-              </div>
-            </div>
-          </div>
-          <div class="pagination">
-            <div>
-              <img src="../assets/right.svg" alt="" />
-            </div>
-            <div>
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-            </div>
-            <div>
-              <img src="../assets/left.svg" alt="" />
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
 
-    <script src="../js/Landing.js"></script>
+      <div class="comments" id="commentsSection">
+          <!-- Existing comments will be dynamically added here -->
+      </div>
+
+  </div>
+
+  <script src="../js/Landing.js"></script>
+  <script>
+      function addComment() {
+          var name = document.getElementById('name').value;
+          var commentText = document.getElementById('comment').value;
+          
+          // Check if both name and comment are provided
+          if (name.trim() === '' || commentText.trim() === '') {
+              alert('Please provide both name and comment.');
+              return;
+          }
+
+          var commentSection = document.getElementById('commentsSection');
+          
+          // Create a new comment container
+          var newCommentContainer = document.createElement('div');
+          newCommentContainer.className = 'comment-cont-two';
+
+          // Create HTML for the new comment
+          var newCommentHTML = `
+              <div>
+                  <h4>${name} says...</h4>
+                  <p>${commentText}</p>
+                  <span>${getFormattedDate()}</span>
+                  <button class="remove-button" onclick="removeComment(this)">Remove Comment</button>
+              </div>
+          `;
+
+          // Set the innerHTML of the new comment container
+          newCommentContainer.innerHTML = newCommentHTML;
+
+          // Append the new comment container to the comments section
+          commentSection.appendChild(newCommentContainer);
+
+          // Clear the input fields
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      }
+
+      function removeComment(buttonElement) {
+          var commentContainer = buttonElement.parentElement;
+          commentContainer.remove();
+      }
+
+      function getFormattedDate() {
+          var currentDate = new Date();
+          var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+          return currentDate.toLocaleDateString('en-US', options);
+      }
+  </script>
   </body>
 </html>
