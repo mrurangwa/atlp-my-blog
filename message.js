@@ -27,7 +27,7 @@ const formatTimestamp = (timestamp) => {
 
 const renderMessages = () => {
   messageContainer.innerHTML = '';
-  messages.forEach((message) => {
+  messages.forEach((message, index) => {
     const messageCard = document.createElement('div');
     messageCard.classList.add('messageCard');
 
@@ -43,9 +43,19 @@ const renderMessages = () => {
     dateElement.classList.add('date');
     dateElement.textContent = formatTimestamp(message.timestamp);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('deleteButton');
+    deleteButton.addEventListener('click', () => {
+      messages.splice(index, 1);
+      localStorage.setItem('messages', JSON.stringify(messages));
+      renderMessages();
+    });
+
     messageCard.appendChild(nameElement);
     messageCard.appendChild(descElement);
     messageCard.appendChild(dateElement);
+    messageCard.appendChild(deleteButton);
 
     messageContainer.appendChild(messageCard);
   });
